@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     backgroundColor: red[500]
+  },
+  button: {
+    margin: theme.spacing(1)
   }
 }));
 
@@ -55,9 +58,13 @@ export default function RecipeReviewCard() {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
+            Take Challenge
+          </Button>
         }
         title="Finnish National Gallery"
       />
